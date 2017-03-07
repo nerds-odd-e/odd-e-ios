@@ -1,0 +1,7 @@
+github "SVProgressHUD/SVProgressHUD"
+github "socketio/socket.io-client-swift"
+github "LaiFengiOS/LFLiveKit"
+github "Moya/Moya"
+github "thoughtbot/Argo"
+github "thoughtbot/Curry"
+github "delba/TextAttributes"
