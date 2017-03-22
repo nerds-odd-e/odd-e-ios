@@ -12,9 +12,19 @@ class LiveRoom {
     var title: String?
     var key: String?
 
+    init(title: String){
+        self.title = title
+    }
+    
     class func from(_ dto: DTO.LiveRoom) -> LiveRoom! {
-        let room = LiveRoom()
-        room.title = dto.title
+        let room = LiveRoom(title: dto.title)
         return room
+    }
+    
+    func toDict() -> [String: AnyObject] {
+        return [
+            "title": title as AnyObject,
+            "key": key as AnyObject
+        ]
     }
 }

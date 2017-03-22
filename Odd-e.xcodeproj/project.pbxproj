@@ -32,6 +32,9 @@
 		0C7C3A671E6D92AF0039826A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7C3A601E6D92AF0039826A /* UIKit.framework */; };
 		0C7C3A681E6D92AF0039826A /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7C3A611E6D92AF0039826A /* VideoToolbox.framework */; };
 		0C7C3A6A1E6E6B010039826A /* TextAttributes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7C3A691E6E6B010039826A /* TextAttributes.framework */; };
+		0CC45E591E80F64300EECEFD /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC45E581E80F64300EECEFD /* DesignableButton.swift */; };
+		0CC45E5B1E80F8CB00EECEFD /* BroadcastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC45E5A1E80F8CB00EECEFD /* BroadcastViewController.swift */; };
+		0CC45E5D1E80FA0000EECEFD /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC45E5C1E80FA0000EECEFD /* Config.swift */; };
 		EBC6D380D195C6F80D436B88 /* LiveRooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC6DF875B17B826C7B1B8CF /* LiveRooms.swift */; };
 		EBC6D83CBE7B36768BE0588F /* LiveRoom.dto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC6D4636AB3AF7AA5152577 /* LiveRoom.dto.swift */; };
 		EBC6DBD3182BF53E28413560 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC6D449A35D2C3578D5BF1D /* Api.swift */; };
@@ -65,6 +68,9 @@
 		0C7C3A601E6D92AF0039826A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0C7C3A611E6D92AF0039826A /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		0C7C3A691E6E6B010039826A /* TextAttributes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TextAttributes.framework; path = Carthage/Build/iOS/TextAttributes.framework; sourceTree = "<group>"; };
+		0CC45E581E80F64300EECEFD /* DesignableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
+		0CC45E5A1E80F8CB00EECEFD /* BroadcastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BroadcastViewController.swift; sourceTree = "<group>"; };
+		0CC45E5C1E80FA0000EECEFD /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		EBC6D449A35D2C3578D5BF1D /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		EBC6D4636AB3AF7AA5152577 /* LiveRoom.dto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveRoom.dto.swift; sourceTree = "<group>"; };
 		EBC6DF875B17B826C7B1B8CF /* LiveRooms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveRooms.swift; sourceTree = "<group>"; };
@@ -123,6 +129,7 @@
 				0C3DDCA01E6C4997005E3F75 /* Main.storyboard */,
 				0C3DDCB01E6C4B59005E3F75 /* LiveRoom.swift */,
 				0C3DDCAE1E6C4B12005E3F75 /* LiveRoomsTableViewController.swift */,
+				0CC45E5A1E80F8CB00EECEFD /* BroadcastViewController.swift */,
 				0C3DDCA31E6C4997005E3F75 /* Assets.xcassets */,
 				0C3DDCA51E6C4997005E3F75 /* LaunchScreen.storyboard */,
 				0C3DDCA81E6C4997005E3F75 /* Info.plist */,
@@ -130,6 +137,8 @@
 				EBC6D449A35D2C3578D5BF1D /* Api.swift */,
 				EBC6DC0F96F24C474FE0599F /* DTO */,
 				EBC6DF875B17B826C7B1B8CF /* LiveRooms.swift */,
+				0CC45E581E80F64300EECEFD /* DesignableButton.swift */,
+				0CC45E5C1E80FA0000EECEFD /* Config.swift */,
 			);
 			path = "Odd-e";
 			sourceTree = "<group>";
@@ -267,10 +276,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C3DDCAF1E6C4B12005E3F75 /* LiveRoomsTableViewController.swift in Sources */,
+				0CC45E5B1E80F8CB00EECEFD /* BroadcastViewController.swift in Sources */,
 				0C7C3A461E6D6B7D0039826A /* ApiDefinition.swift in Sources */,
 				0C3DDC9B1E6C4997005E3F75 /* AppDelegate.swift in Sources */,
+				0CC45E591E80F64300EECEFD /* DesignableButton.swift in Sources */,
 				0C3DDCB11E6C4B59005E3F75 /* LiveRoom.swift in Sources */,
 				EBC6DBD3182BF53E28413560 /* Api.swift in Sources */,
+				0CC45E5D1E80FA0000EECEFD /* Config.swift in Sources */,
 				EBC6D83CBE7B36768BE0588F /* LiveRoom.dto.swift in Sources */,
 				EBC6D380D195C6F80D436B88 /* LiveRooms.swift in Sources */,
 			);

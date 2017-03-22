@@ -31,11 +31,11 @@ extension ApiDefinition: TargetType, Authorizable {
         }
     }
     
-    var baseURL: URL { return URL(string: "http://localhost:1337")! }
+    var baseURL: URL { return URL(string: Config.serverUrl)! }
     var path: String {
         switch self {
         case .getRooms:
-            return "/room"
+            return "/rooms"
         }
     }
     var method: Moya.Method {
