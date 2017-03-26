@@ -44,10 +44,6 @@ class LiveRoomsTableViewController: UITableViewController {
         joinRoom(room)
     }
     
-    @IBAction func addButtonClick(_ sender: Any) {
-        createRoom()
-    }
-    
     @IBAction func refreshButtonClick(_ sender: Any) {
         fetchRooms()
     }
