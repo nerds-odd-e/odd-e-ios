@@ -11,6 +11,7 @@ import Runes
 struct DTO{
     struct LiveRoom {
         var title: String = ""
+        var key: String = ""
     }
 }
 
@@ -18,6 +19,7 @@ extension DTO.LiveRoom: Decodable {
     static func decode(_ json: JSON) -> Decoded<DTO.LiveRoom> {
         return curry(DTO.LiveRoom.init)
                 <^> json <| "title"
+                <*> json <| "key"
     }
 }
 

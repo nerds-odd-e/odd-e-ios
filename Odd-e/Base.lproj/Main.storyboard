@@ -42,15 +42,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="LiveRoomCell" textLabel="uJ0-T4-WLn" rowHeight="44" style="IBUITableViewCellStyleDefault" id="50p-3x-kZ1">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LiveRoomCell" textLabel="uJ0-T4-WLn" rowHeight="44" style="IBUITableViewCellStyleDefault" id="50p-3x-kZ1">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="50p-3x-kZ1" id="9Dj-eJ-BSO">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uJ0-T4-WLn">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -70,7 +70,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="add" id="WFK-0D-iRC">
                             <connections>
                                 <action selector="addButtonClick:" destination="vSd-8U-iMI" id="9PE-Xe-ImE"/>
-                                <segue destination="wJ7-GH-I3G" kind="popoverPresentation" popoverAnchorBarButtonItem="WFK-0D-iRC" id="857-Io-MG5">
+                                <segue destination="wJ7-GH-I3G" kind="popoverPresentation" identifier="CreateRoom" popoverAnchorBarButtonItem="WFK-0D-iRC" id="857-Io-MG5">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                 </segue>
                             </connections>
@@ -246,6 +246,75 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fBv-HL-7yF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1133.5999999999999" y="1.3493253373313345"/>
+        </scene>
+        <!--Audience View Controller-->
+        <scene sceneID="iQQ-fx-GOc">
+            <objects>
+                <viewController storyboardIdentifier="audience" id="YPL-ak-Khb" customClass="AudienceViewController" customModule="Odd_e" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="alv-mI-iF6"/>
+                        <viewControllerLayoutGuide type="bottom" id="Da3-rD-Mcc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pdp-Pw-MmY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JxR-C6-BWC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FRx-dS-deF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Loading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frc-0q-VLH">
+                                <rect key="frame" x="160" y="50" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="13"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFf-LZ-bFR" customClass="DesignableButton" customModule="Odd_e" customModuleProvider="target">
+                                <rect key="frame" x="10" y="30" width="40" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Y5T-pk-9DE"/>
+                                    <constraint firstAttribute="width" constant="40" id="pzO-XK-Iuv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="12"/>
+                                <state key="normal" image="icon-close"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="closeButtonPressed:" destination="YPL-ak-Khb" eventType="touchUpInside" id="ILs-Xd-pdV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JxR-C6-BWC" firstAttribute="leading" secondItem="pdp-Pw-MmY" secondAttribute="leading" id="4i9-km-Uyy"/>
+                            <constraint firstItem="iFf-LZ-bFR" firstAttribute="top" secondItem="alv-mI-iF6" secondAttribute="bottom" constant="10" id="7i8-M0-oZa"/>
+                            <constraint firstItem="FRx-dS-deF" firstAttribute="bottom" secondItem="JxR-C6-BWC" secondAttribute="bottom" id="BXt-Ww-xP0"/>
+                            <constraint firstItem="FRx-dS-deF" firstAttribute="leading" secondItem="JxR-C6-BWC" secondAttribute="leading" id="EuN-XA-9aO"/>
+                            <constraint firstItem="FRx-dS-deF" firstAttribute="top" secondItem="JxR-C6-BWC" secondAttribute="top" id="Vb1-wO-Hzz"/>
+                            <constraint firstItem="Da3-rD-Mcc" firstAttribute="top" secondItem="JxR-C6-BWC" secondAttribute="bottom" id="ZHg-z1-wrv"/>
+                            <constraint firstItem="FRx-dS-deF" firstAttribute="trailing" secondItem="JxR-C6-BWC" secondAttribute="trailing" id="cNv-nw-neo"/>
+                            <constraint firstItem="frc-0q-VLH" firstAttribute="centerY" secondItem="iFf-LZ-bFR" secondAttribute="centerY" id="fZT-EX-F5j"/>
+                            <constraint firstItem="JxR-C6-BWC" firstAttribute="top" secondItem="alv-mI-iF6" secondAttribute="bottom" constant="-20" id="i45-xj-xOM"/>
+                            <constraint firstAttribute="trailing" secondItem="JxR-C6-BWC" secondAttribute="trailing" id="kOf-ia-8Wv"/>
+                            <constraint firstItem="frc-0q-VLH" firstAttribute="centerX" secondItem="pdp-Pw-MmY" secondAttribute="centerX" id="lKF-cm-FPS"/>
+                            <constraint firstItem="iFf-LZ-bFR" firstAttribute="leading" secondItem="pdp-Pw-MmY" secondAttribute="leading" constant="10" id="soF-lb-k6T"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="previewView" destination="JxR-C6-BWC" id="hmg-rD-xDA"/>
+                        <outlet property="statusLabel" destination="frc-0q-VLH" id="qzi-9M-wZY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e4n-qd-ENL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2790" y="743"/>
         </scene>
     </scenes>
     <resources>

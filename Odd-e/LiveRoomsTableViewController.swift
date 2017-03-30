@@ -47,13 +47,15 @@ class LiveRoomsTableViewController: UITableViewController {
     @IBAction func refreshButtonClick(_ sender: Any) {
         fetchRooms()
     }
-    
-    private func createRoom(){
 
-    }
-    
     private func joinRoom(_ room: LiveRoom){
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let audienceVC = sb.instantiateViewController(withIdentifier: "audience") as! AudienceViewController
+        audienceVC.modalPresentationStyle = .popover
+        //detailVC.popoverPresentationController?.sourceView = tableView.cellForRow(at: indexPath)
+        audienceVC.room = room
         
+        self.present(audienceVC, animated: true, completion: {})
     }
 
     private func fetchRooms() {
@@ -65,15 +67,5 @@ class LiveRoomsTableViewController: UITableViewController {
             me.tableView.reloadData()
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

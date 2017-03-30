@@ -9,8 +9,8 @@
 import Foundation
 
 class LiveRoom {
-    var title: String?
-    var key: String?
+    var title = ""
+    var key = ""
 
     init(title: String){
         self.title = title
@@ -18,6 +18,7 @@ class LiveRoom {
     
     class func from(_ dto: DTO.LiveRoom) -> LiveRoom! {
         let room = LiveRoom(title: dto.title)
+        room.key = dto.key
         return room
     }
     
