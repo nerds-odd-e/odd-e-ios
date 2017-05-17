@@ -68,7 +68,7 @@ class BroadcastViewController: UIViewController {
 
             if let room = data[0] as? [String: Any] {
                 let stream = LFLiveStreamInfo()
-                stream.url = "\(Config.rtmpPushUrl)\(room["key"]!)"
+                stream.url = room["url"] as! String
                 print(stream.url)
                 this.session.startLive(stream)
             }

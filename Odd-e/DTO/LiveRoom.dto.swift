@@ -12,6 +12,7 @@ struct DTO{
     struct LiveRoom {
         var title: String = ""
         var key: String = ""
+        var url: String = ""
     }
 }
 
@@ -20,6 +21,7 @@ extension DTO.LiveRoom: Decodable {
         return curry(DTO.LiveRoom.init)
                 <^> json <| "title"
                 <*> json <| "key"
+                <*> json <| "url"
     }
 }
 

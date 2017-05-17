@@ -24,9 +24,7 @@ class AudienceViewController: UIViewController {
         super.viewDidLoad()
 
 
-        let urlString = Config.rtmpPlayUrl + room.key
-        print(urlString)
-        player = IJKFFMoviePlayerController(contentURLString: urlString, with: IJKFFOptions.byDefault())  //contetURLStrint helps you making a complete stream at rooms with special characters.
+        player = IJKFFMoviePlayerController(contentURLString: room.url, with: IJKFFOptions.byDefault())  //contetURLStrint helps you making a complete stream at rooms with special characters.
 
         player.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         player.view.frame = previewView.bounds
